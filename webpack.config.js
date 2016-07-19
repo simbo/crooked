@@ -1,4 +1,4 @@
-const ENV = ((env) => {
+const env = ((env) => {
   switch(env) {
     case 'build':
     case 'production':
@@ -9,4 +9,6 @@ const ENV = ((env) => {
   }
 })(process.env.npm_lifecycle_event || process.env.NODE_ENV);
 
-module.exports = require('./webpack/config.' + ENV);
+console.log(`Environment: ${env}`);
+
+module.exports = require(`./webpack/config.${env}`);
