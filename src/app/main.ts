@@ -8,3 +8,5 @@ bootstrap(MainAppComponent, [
   HTTP_PROVIDERS,
   ROUTER_PROVIDERS
 ]).catch(err => console.error(err));
+
+require('styl/main.styl');
