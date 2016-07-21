@@ -52,7 +52,7 @@
     "rimraf": "^2.5.3",
     "style-loader": "^0.13.1",
     "stylus": "^0.54.5",
-    "stylus-loader": "^2.1.1",
+    "stylus-loader": "simbo/stylus-loader",
     "ts-helpers": "^1.1.1",
     "ts-loader": "^0.8.2",
     "typescript": "^1.8.10",

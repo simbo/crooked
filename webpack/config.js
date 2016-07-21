@@ -6,13 +6,8 @@ const autoprefixer = require('autoprefixer'),
       HtmlWebpackPlugin = require('html-webpack-plugin'),
       webpack = require('webpack');
 
-const cwd = path.dirname(__dirname);
-
-const styleExtract = new ExtractTextPlugin('style/[name].css'),
-      stylusPaths = [
-        path.join(cwd, 'src/styl/imports'),
-        path.join(cwd, 'node_modules')
-      ];
+const cwd = path.dirname(__dirname),
+      styleExtract = new ExtractTextPlugin('style/[name].css');
 
 const config = {
 
@@ -41,12 +36,12 @@ const config = {
       exclude: [/node_modules\/(?!(ng2-.+))/]
     }, {
       test: /\.styl$/,
-      exclude: path.join(cwd, 'src/app'),
-      loader: styleExtract.extract('style', `css?sourceMap!postcss!stylus?paths=${stylusPaths}`)
+      exclude: path.join(cwd, 'src/styl'),
+      loader: `raw!postcss!stylus`
     }, {
       test: /\.styl$/,
-      exclude: path.join(cwd, 'src/styl'),
-      loader: `raw!postcss!stylus?paths=${stylusPaths}`
+      exclude: path.join(cwd, 'src/app'),
+      loader: styleExtract.extract('style', `css?sourceMap!postcss!stylus`)
     }, {
       test: /\.html$/,
       loader: 'raw'
@@ -70,6 +65,10 @@ const config = {
   ],
 
   stylus: {
+    paths: [
+      path.join(cwd, 'src/styl/imports'),
+      path.join(cwd, 'node_modules')
+    ],
     'include css': true,
     url: {
       name: 'inline-url',
