@@ -26,7 +26,7 @@ const config = {
 
   resolve: {
     root: path.join(cwd, 'src'),
-    extensions: ['', '.ts', '.js', '.html', '.styl']
+    extensions: ['', '.ts', '.js', '.jade', '.styl']
   },
 
   module: {
@@ -43,8 +43,8 @@ const config = {
       exclude: path.join(cwd, 'src/app'),
       loader: styleExtract.extract('style', `css?sourceMap!postcss!stylus`)
     }, {
-      test: /\.html$/,
-      loader: 'raw'
+      test: /\.jade$/,
+      loader: 'raw!jade-html'
     }],
     noParse: [
       /.+zone\.js\/dist\/.+/,
@@ -58,7 +58,7 @@ const config = {
       name: ['vendor', 'polyfills']
     }),
     new HtmlWebpackPlugin({
-      template: 'src/static/index.html',
+      template: 'src/static/index.jade',
       chunksSortMode: 'dependency'
     }),
     styleExtract

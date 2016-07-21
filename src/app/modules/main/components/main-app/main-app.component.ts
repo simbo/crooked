@@ -4,7 +4,7 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
 @Component({
   selector: 'main-app',
   directives: [...ROUTER_DIRECTIVES],
-  templateUrl: './main-app.component.html'
+  templateUrl: './main-app.component.jade'
 })
 
 export class MainAppComponent {

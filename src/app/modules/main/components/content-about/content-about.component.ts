@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'content-about',
-  templateUrl: './content-about.component.html',
+  templateUrl: './content-about.component.jade',
   styleUrls: ['./content-about.component.styl']
 })
 
