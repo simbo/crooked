@@ -1,4 +1,5 @@
-const webpack = require('webpack'),
+const csswring = require('csswring'),
+      webpack = require('webpack'),
       webpackMerge = require('webpack-merge');
 
 const config = require('./config');
@@ -34,7 +35,13 @@ const configProd = webpackMerge(config, {
         comments: false
       }
     })
-  ]
+  ],
+
+  postcss: () => config.postcss().concat([
+    csswring({
+      preserveHacks: true
+    })
+  ])
 
 });
 
