@@ -32,16 +32,16 @@ const config = {
   module: {
     loaders: [{
       test: /\.ts$/,
-      loaders: ['ts', 'angular2-template-loader'],
+      loader: 'ts!angular2-template',
       exclude: [/node_modules\/(?!(ng2-.+))/]
     }, {
       test: /\.styl$/,
-      exclude: path.join(cwd, 'src/styl'),
-      loader: `raw!postcss!stylus`
+      loader: 'raw!postcss!stylus',
+      exclude: path.join(cwd, 'src', 'styles')
     }, {
       test: /\.styl$/,
-      exclude: path.join(cwd, 'src/app'),
-      loader: styleExtract.extract('style', `css?sourceMap!postcss!stylus`)
+      loader: styleExtract.extract('style', 'css?sourceMap!postcss!stylus'),
+      exclude: path.join(cwd, 'src', 'app')
     }, {
       test: /\.pug$/,
       loader: 'raw!pug-html'
@@ -80,15 +80,13 @@ const config = {
     }
   },
 
-  postcss: function() {
-    return [
-      autoprefixer({
-        browsers: ['> 0%'],
-        remove: false
-      }),
-      cssMqpacker()
-    ];
-  }
+  postcss: () => [
+    autoprefixer({
+      browsers: ['> 0.25%'],
+      remove: false
+    }),
+    cssMqpacker()
+  ]
 
 };
 
