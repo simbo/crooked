@@ -14,6 +14,11 @@ const configDev = webpackMerge(config, {
     stats: 'minimal',
     inline: true,
     port: 8080
+  },
+
+  pugHtml: {
+    compileDebug: true,
+    pretty: true
   }
 
 });

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'content-home',
-  templateUrl: './content-home.component.jade'
+  templateUrl: './content-home.component.pug'
 })
 
 export class ContentHomeComponent implements OnInit {
