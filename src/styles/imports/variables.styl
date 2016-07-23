@@ -1,0 +1,62 @@
+/**
+ * Constants
+ */
+
+$phi = 1.6180339887
+
+
+/**
+ * Colors
+ */
+
+$colorValues = {
+  blue: rgb(68, 138, 255)
+}
+
+$colorUseCases = {
+  background: ivory,
+  text: black,
+  links: dodgerblue,
+  borders: slategray
+}
+
+$colors = merge($colorValues, $colorUseCases)
+
+
+/**
+ * Typo
+ */
+
+$font-family = {
+  sans: "Helvetica Neue"\, Helvetica\, Arial\, NimbusSansL\, LiberationSans\, FreeSans\, Clean\, sans-serif,
+  mono: Consolas\, "Liberation Mono"\, Menlo\, Courier\, monospace
+}
+
+$root-font-size = 16px
+
+$font-size-multipliers = {
+  small: .75,
+  normal: 1,
+  large: 1.45
+}
+
+$font-size = {}
+for $key, $multiplier in $font-size-multipliers
+  $font-size[$key] = unit($multiplier, 'rem')
+
+$line-height = {
+  small:  1.666666667, // 20/12
+  normal: 1.428571429, // 20/14
+  large:  1.333333333 // 22/18
+}
+
+
+/**
+ * Spacings
+ */
+
+$spacing = {
+  normal: $font-size.normal * $line-height.normal
+}
+$spacing.small = $spacing.normal * .75
+$spacing.large = $spacing.normal * 1.5

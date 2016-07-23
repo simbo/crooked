@@ -7,7 +7,7 @@ const autoprefixer = require('autoprefixer'),
       webpack = require('webpack');
 
 const cwd = path.dirname(__dirname),
-      styleExtract = new ExtractTextPlugin('style/[name].css');
+      styleExtract = new ExtractTextPlugin('styles/[name].css');
 
 const config = {
 
@@ -70,7 +70,7 @@ const config = {
 
   stylus: {
     paths: [
-      path.join(cwd, 'src/styl/imports'),
+      path.join(cwd, 'src', 'styles', 'imports'),
       path.join(cwd, 'node_modules')
     ],
     'include css': true,
