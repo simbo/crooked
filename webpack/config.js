@@ -2,6 +2,7 @@ const path = require('path');
 
 const autoprefixer = require('autoprefixer'),
       cssMqpacker = require('css-mqpacker'),
+      CopyWebpackPlugin = require('copy-webpack-plugin'),
       ExtractTextPlugin = require('extract-text-webpack-plugin'),
       HtmlWebpackPlugin = require('html-webpack-plugin'),
       webpack = require('webpack');
@@ -62,7 +63,12 @@ const config = {
       template: 'src/templates/app.pug',
       chunksSortMode: 'dependency'
     }),
-    styleExtract
+    styleExtract,
+    new CopyWebpackPlugin([{
+      from: 'fonts/**/*.@(svg|ttf|woff)',
+      to: 'assets',
+      context: src
+    }])
   ],
 
   pugHtml: {

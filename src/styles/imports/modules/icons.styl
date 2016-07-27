@@ -1,0 +1,40 @@
+$iconCollection = {
+  dot: '\e061',
+  add: '\e145',
+  remove: '\e15b',
+  lens: '\e3fa',
+  navigate_before: '\e408',
+  navigate_next: '\e409',
+  arrow_drop_down: '\e5c5',
+  arrow_drop_up: '\e5c7',
+  expand_less: '\e5ce',
+  expand_more: '\e5cf',
+  more_vert: '\e5d4'
+}
+
+@font-face
+  font-family: 'icons'
+  src: url('/assets/fonts/icons/icons.ttf') format('truetype'),
+    url('/assets/fonts/icons/icons.woff') format('woff'),
+    url('/assets/fonts/icons/icons.svg#icons') format('svg')
+  font-weight: normal
+  font-style: normal
+
+$icon-container,
+[class^="icon--"],
+[class*=" icon--"]
+  font-family: 'icons' !important
+  speak: none
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  text-transform: none
+  text-rendering: auto
+  line-height: 1
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+for $key, $code in $iconCollection
+  $icon--{key},
+  .icon--{$key}::before
+    content: $code
