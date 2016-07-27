@@ -7,7 +7,8 @@ const autoprefixer = require('autoprefixer'),
       webpack = require('webpack');
 
 const cwd = path.dirname(__dirname),
-      styleExtract = new ExtractTextPlugin('styles/[name].css');
+      src = path.join(cwd, 'src'),
+      styleExtract = new ExtractTextPlugin('assets/styles/[name].css');
 
 const config = {
 
@@ -20,12 +21,12 @@ const config = {
   output: {
     path: 'build',
     publicPath: '/',
-    filename: 'app/[name].js',
+    filename: 'assets/app/[name].js',
     chunkFilename: '[id].chunk.js'
   },
 
   resolve: {
-    root: path.join(cwd, 'src'),
+    root: src,
     extensions: ['', '.ts', '.js', '.pug', '.styl']
   },
 
@@ -65,12 +66,12 @@ const config = {
   ],
 
   pugHtml: {
-    basedir: path.join(cwd, 'src', 'templates')
+    basedir: path.join(src, 'templates')
   },
 
   stylus: {
     paths: [
-      path.join(cwd, 'src', 'styles', 'imports'),
+      path.join(src, 'styles', 'imports'),
       path.join(cwd, 'node_modules')
     ],
     'include css': true,
