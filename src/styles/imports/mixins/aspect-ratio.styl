@@ -1,0 +1,13 @@
+/**
+ * Keep aspect ratio for a container
+ */
+
+aspect-ratio($width, $height)
+  position: relative
+  overflow: hidden
+
+  &::before
+    content: ''
+    display: block
+    width: 100%
+    padding-bottom: unit($height / $width * 100, '%')
