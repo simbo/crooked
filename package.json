@@ -36,13 +36,13 @@
     "@angular/router": "3.0.0-beta.2",
     "css-reset-and-normalize": "^0.3.0",
     "es6-shim": "^0.35.1",
-    "reflect-metadata": "^0.1.3",
+    "reflect-metadata": "^0.1.4",
     "rxjs": "5.0.0-beta.10",
     "zone.js": "^0.6.12"
   },
   "devDependencies": {
     "angular2-template-loader": "^0.4.0",
-    "autoprefixer": "^6.3.7",
+    "autoprefixer": "^6.4.0",
     "copy-webpack-plugin": "^3.0.1",
     "css-loader": "^0.23.1",
     "css-mqpacker": "^5.0.1",
@@ -54,16 +54,16 @@
     "pug": "^2.0.0-beta4",
     "pug-html-loader": "github:simbo/pug-html-loader",
     "raw-loader": "0.5.1",
-    "rimraf": "^2.5.3",
+    "rimraf": "^2.5.4",
     "style-loader": "^0.13.1",
     "stylus": "^0.54.5",
     "stylus-loader": "github:simbo/stylus-loader",
     "ts-helpers": "^1.1.1",
     "ts-loader": "^0.8.2",
     "typescript": "^1.8.10",
-    "typings": "^1.3.1",
+    "typings": "^1.3.2",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1",
-    "webpack-merge": "^0.14.0"
+    "webpack-merge": "^0.14.1"
   }
 }
