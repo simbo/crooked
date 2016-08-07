@@ -1,16 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'content-about',
   templateUrl: './content-about.template.pug'
 })
 
-export class ContentAboutComponent implements OnInit {
+export class ContentAboutComponent{
 
   constructor() {}
-
-  ngOnInit() {
-    console.log('Hello About');
-  }
 
 }
