@@ -1,9 +1,9 @@
-import { provideRouter, RouterConfig } from '@angular/router';
+import {provideRouter, RouterConfig} from '@angular/router';
 
-import { ContentHomeComponent } from './components/content-home/content-home.component';
-import { ContentAboutComponent } from './components/content-about/content-about.component';
-import { ContentLoginComponent } from './components/content-login/content-login.component'
-import { ContentRegisterComponent } from './components/content-register/content-register.component'
+import {ContentHomeComponent} from './components/content-home/content-home.component';
+import {ContentAboutComponent} from './components/content-about/content-about.component';
+import {ContentLoginComponent} from './components/content-login/content-login.component'
+import {ContentRegisterComponent} from './components/content-register/content-register.component'
 
 export const routes: RouterConfig = [{
   path: '',

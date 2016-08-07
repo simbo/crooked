@@ -1,4 +1,4 @@
-import {Directive, OnInit} from "@angular/core";
+import {Directive, OnInit} from '@angular/core';
 
 import {DropdownGroupService} from "./dropdown-group.service";
 

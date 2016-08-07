@@ -1,4 +1,4 @@
-import {DropdownDirective} from "./dropdown.directive";
+import {DropdownDirective} from './dropdown.directive';
 
 function getGroupKey(dropdown?:DropdownDirective):string {
   return dropdown.groupKey || '';

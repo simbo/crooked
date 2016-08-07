@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
-import { MainNavComponent } from '../main-nav/main-nav.component';
+import {Component}  from '@angular/core';
+import {ROUTER_DIRECTIVES} from '@angular/router';
+import {MainNavComponent} from '../main-nav/main-nav.component';
 
 @Component({
   selector: 'main-app',

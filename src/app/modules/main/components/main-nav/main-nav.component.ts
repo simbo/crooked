@@ -1,4 +1,4 @@
-import {Component, ElementRef} from '@angular/core';
+import {Component} from '@angular/core';
 import {ROUTER_DIRECTIVES} from '@angular/router';
 
 import {DROPDOWN_DIRECTIVES, DROPDOWN_SERVICES} from "../../../common/directives/dropdown";

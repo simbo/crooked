@@ -1,6 +1,6 @@
-import {Directive, Host} from "@angular/core";
+import {Directive, Host} from '@angular/core';
 
-import {DropdownDirective} from "./dropdown.directive";
+import {DropdownDirective} from './dropdown.directive';
 
 @Directive({
   selector: '[dropdown-toggle]',
