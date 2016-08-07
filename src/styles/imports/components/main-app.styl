@@ -1,4 +1,15 @@
+@require 'extendable-mixins'
+
 .main-app
 
   &__loading
-    color: red
+    padding: 1em
+    line-height: $line-height.normal
+
+.site-header,
+.site-main,
+.site-nav
+  position: relative
+
+.site-nav
+  @extend $clearfix
