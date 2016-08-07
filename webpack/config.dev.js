@@ -18,7 +18,7 @@ const configDev = webpackMerge(config, {
 
   pugHtml: {
     compileDebug: true,
-    pretty: true
+    pretty: false
   }
 
 });
