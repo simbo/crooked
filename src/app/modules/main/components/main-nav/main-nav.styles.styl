@@ -1,0 +1,64 @@
+@require 'config'
+
+$main-nav = {
+  item-height: 48px,
+  font-size: 18px
+  link-color: $colors.text,
+  link-color--hover: lighten($colors.text, 20%)
+}
+
+$main-nav__link
+  display: block
+  font-size: $main-nav.font-size
+  line-height: $main-nav.item-height
+  color: $main-nav.link-color
+  white-space: nowrap
+
+  &:hover
+    color: $main-nav.link-color--hover
+
+.main-nav,
+.main-subnav
+
+  &__link
+    padding: 0 .8em
+
+
+.main-nav
+
+  &--left
+    float: left
+
+  &--right
+    float: right
+
+  &__item
+    display: inline-block
+    position: relative
+
+  &__link
+    @extend $main-nav__link
+
+    &--icon
+      width: $main-nav.item-height
+      text-align: center
+
+.main-subnav
+  position: absolute
+  top: 100%
+  min-width: 8em
+
+  .d-dropdown--hidden > &
+    display: none
+
+  &,
+  .main-nav--left &
+    left: 0
+    right: auto
+
+  .main-nav--right &
+    left: auto
+    right: 0
+
+  &__link
+    @extend $main-nav__link
