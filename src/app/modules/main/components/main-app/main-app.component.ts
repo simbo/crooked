@@ -8,7 +8,7 @@ import { MainNavComponent } from '../main-nav/main-nav.component';
     ...ROUTER_DIRECTIVES,
     MainNavComponent
   ],
-  templateUrl: './main-app.template.pug'
+  templateUrl: './main-app.template'
 })
 
 export class MainAppComponent {
