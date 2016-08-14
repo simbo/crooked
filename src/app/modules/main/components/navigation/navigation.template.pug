@@ -1,16 +1,24 @@
+mixin nav-item(link)
+  li.nav__item(
+    routerLinkActive="nav__item--current",
+    [routerLinkActiveOptions] = "{exact: true}"
+  )
+    a.nav__link(
+      routerLink=link
+    )
+      block
+
 ul.nav__list.nav__list--left
-  li.nav__item
-    a.nav__link([routerLink]="['']") Home
-  li.nav__item
-    a.nav__link([routerLink]="['demo']") Demo
-  li.nav__item
-    a.nav__link([routerLink]="['about']") About
+  +nav-item('') Home
+  +nav-item('demo') Demo
+  +nav-item('about') About
 
 ul.nav__list.nav__list--right
-  li.nav__item(dropdown)
+  li.nav__item(
+    dropdown,
+    routerLinkActive="nav__item--current-ancestor",
+  )
     button.nav__link.nav__link--icon-only(dropdown-toggle) #[i.icon--account-circle]
     ul.nav__list
-      li.nav__item
-        a.nav__link([routerLink]="['login']") #[i.icon--person] Login
-      li.nav__item
-        a.nav__link([routerLink]="['register']") #[i.icon--person-add] Register
+      +nav-item('login') #[i.icon--person] Login
+      +nav-item('register') #[i.icon--person-add] Register
