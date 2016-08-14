@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'content-home',
+  selector: 'c-content-home',
   templateUrl: './content-register.template'
 })
 
