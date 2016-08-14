@@ -1,14 +1,19 @@
 import {Component}  from '@angular/core';
 import {ROUTER_DIRECTIVES} from '@angular/router';
-import {MainNavComponent} from '../main-nav/main-nav.component';
+
+import {MainNavComponent} from './modules/main/components/navigation/navigation';
 
 @Component({
-  selector: 'main-app',
+  selector: 'c-app',
+  templateUrl: './app.template',
+  styleUrls: ['./app.styles'],
+  host: {
+    '[class.app]': 'true'
+  },
   directives: [
     ...ROUTER_DIRECTIVES,
     MainNavComponent
-  ],
-  templateUrl: './main-app.template'
+  ]
 })
 
 export class MainAppComponent {

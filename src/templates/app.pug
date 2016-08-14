@@ -1,8 +1,11 @@
-extends /base.pug
-
-block append head
-  base(href="/")
-
-block body
-  main-app.main-app
-    .main-app__loading Loading…
+doctype html
+html
+  head
+    block head
+      meta(charset="utf-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1")
+      title crooked
+      base(href="/")
+  body
+    c-app
+      .app__loading Loading…

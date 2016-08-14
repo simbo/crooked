@@ -1,12 +1,15 @@
 import {Component} from '@angular/core';
 import {ROUTER_DIRECTIVES} from '@angular/router';
 
-import {DROPDOWN_DIRECTIVES, DROPDOWN_SERVICES} from "../../../common/directives/dropdown";
+import {DROPDOWN_DIRECTIVES, DROPDOWN_SERVICES} from '../../../common/directives/dropdown';
 
 @Component({
-  selector: 'main-nav',
-  templateUrl: './main-nav.template',
-  styleUrls: ['./main-nav.styles'],
+  selector: 'c-navigation',
+  templateUrl: './navigation.template',
+  styleUrls: ['./navigation.styles'],
+  host: {
+    '[class.nav]': 'true'
+  },
   directives: [
     ...DROPDOWN_DIRECTIVES,
     ...ROUTER_DIRECTIVES

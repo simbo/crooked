@@ -1,0 +1,56 @@
+@require 'config'
+@require 'extendable-mixins'
+
+$nav = {
+  item-height: 48px,
+  link-color: $colors.text,
+  link-color--hover: lighten($colors.text, 20%)
+}
+
+$nav__link
+  display: block
+  line-height: $nav.item-height
+  color: $nav.link-color
+  white-space: nowrap
+
+  &:hover
+    color: $nav.link-color--hover
+
+.nav
+
+  &__list
+
+    &--left
+      float: left
+
+    &--right
+      float: right
+
+  &__item
+    display: inline-block
+    position: relative
+
+    & > .nav__list
+      @extend $shadow--1dp
+      position: absolute
+      top: 100%
+
+      .d-dropdown--hidden&
+        display: none
+
+      .nav__list--left &
+        left: 0
+        right: auto
+
+      .nav__list--right &
+        left: auto
+        right: 0
+
+  &__link
+    @extend $nav__link
+    padding: 0 1em
+
+    &--icon-only
+      width: $nav.item-height
+      text-align: center
+      font-size: 22px
