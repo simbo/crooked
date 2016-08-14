@@ -16,7 +16,7 @@ const config = {
   entry: {
     polyfills: 'app/polyfills.ts',
     vendor: 'app/vendor.ts',
-    main: 'app/app.main.ts'
+    main: 'app/main.ts'
   },
 
   output: {
